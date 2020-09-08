@@ -1,6 +1,6 @@
 var searchYouTube = ({key, query, max = 5}, callback) => {
-    // TODO
-    $.get('https://www.googleapis.com/youtube/v3/search', {
+  // TODO
+  $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
     key: key,
     q: query,
@@ -8,14 +8,14 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     type: 'video',
     videoEmbeddable: 'true'
   })
-  .done(({items}) => {
-    if (callback) {
-      callback(items);
-    }
-  })
-  .fail(({responseJSON}) => {
-    responseJSON.error.errors.forEach((err) => console.error(err));
-  });
+    .done(({items}) => {
+      if (callback) {
+        callback(items);
+      }
+    })
+    .fail(({responseJSON}) => {
+      responseJSON.error.errors.forEach((err) => console.error(err));
+    });
 };
 
 export default searchYouTube;

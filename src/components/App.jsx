@@ -40,7 +40,7 @@ class App extends React.Component {
     var options = {
       key: this.props.API_KEY,
       query: query
-    }
+    };
 
     this.props.searchYouTube(options, (videos) => {
       this.setState({
@@ -73,7 +73,7 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

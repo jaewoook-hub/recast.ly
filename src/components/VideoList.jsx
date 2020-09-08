@@ -9,7 +9,7 @@ var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
         handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}
       />
     )
-  )}
+    )}
   </div>
 );
 
